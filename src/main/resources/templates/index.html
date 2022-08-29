@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title></title>
+</head>
+
+<body>
+    <div class="whole_content">
+        <div class="input_block">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="HandBaggage" id="flexRadioDefault1">
+                <label class="form-check-label" for="HandBaggage">
+                    Hand baggage
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="CheckedInBaggage" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="CheckedInBaggage">
+                    Checked-in baggage
+                </label>
+            </div>
+            <div class="form-group row mt-3">
+                <div class="col-md-3">
+                    <select class="form-select">
+                        <option disabled selected>Company</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row mt-3">
+                <div class="col-md-1">
+                    <div class="form-floating">
+                        <input type="number" class="form-control" id="baggage_weight" min="0" max="40">
+                        <label for="baggage_weight">Weight</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row mt-3">
+                <p>Dimensions: </p>
+                <div class="col-md-1">
+                    <div class="form-floating">
+                        <input type="number" class="form-control" id="baggage_width" min="0" max="100">
+                        <label for="baggage_width">Width</label>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="form-floating">
+                        <input type="number" class="form-control" id="baggage_length" min="0" max="100">
+                        <label for="baggage_length">Length</label>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="form-floating">
+                        <input type="number" class="form-control" id="baggage_height" min="0" max="100">
+                        <label for="baggage_height">Height</label>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" class="btn btn-outline-success mt-3" value="Submit">
+        </div>
+        <hr>
+    </div>
+</body>
+
+</html>

@@ -14,16 +14,21 @@ public class BaggageRequirementServiceTest {
     @Autowired
     private BaggageRequirementService baggageRequirementService;
 
-    private static BaggageRequirement requirement1, requirement2;
+    @Autowired
+    private CompanyService companyService;
 
-    private Company company;
-    private BaggageType baggageType;
+    @Autowired
+    private BaggageTypeService baggageTypeService;
+
+    private static BaggageRequirement requirement1, requirement2;
 
     @Test
     @Order(1)
     void save(){
-        company = new Company(1, "A company");
-        baggageType = new BaggageType(1, "Hand baggage");
+        Company company = new Company(1, "A company");
+        company = companyService.save(company);
+        BaggageType baggageType = new BaggageType(1, "Hand baggage");
+        baggageType = baggageTypeService.save(baggageType);
         requirement1 = new BaggageRequirement(1L,
                 company, baggageType,
                 8.0, 30, 20, 40);
