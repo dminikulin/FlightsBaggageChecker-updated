@@ -25,4 +25,9 @@ public class BaggageRequirementsServiceDB implements BaggageRequirementService {
     public BaggageRequirement save(BaggageRequirement requirement) {
         return baggageRequirementRepository.save(requirement);
     }
+
+    @Override
+    public List<BaggageRequirement> findByCompany_IdAndBaggageType_Id(Integer companyId, Integer baggageTypeId) {
+        return baggageRequirementRepository.findByCompany_IdAndBaggageType_Id(companyId, baggageTypeId);
+    }
 }

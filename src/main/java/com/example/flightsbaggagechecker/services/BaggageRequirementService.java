@@ -11,4 +11,6 @@ public interface BaggageRequirementService {
     List<BaggageRequirement> findAll();
 
     BaggageRequirement save(BaggageRequirement requirement);
+
+    List<BaggageRequirement> findByCompany_IdAndBaggageType_Id(Integer companyId, Integer baggageTypeId);
 }

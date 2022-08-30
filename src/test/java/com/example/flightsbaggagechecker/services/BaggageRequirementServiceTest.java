@@ -33,12 +33,21 @@ public class BaggageRequirementServiceTest {
                 company, baggageType,
                 8.0, 30, 20, 40);
         requirement2 = baggageRequirementService.save(requirement1);
-        System.err.println(requirement2);
+//        System.err.println(requirement2);
         Assertions.assertEquals(requirement1, requirement2);
     }
 
     @Test
     @Order(2)
+    void findByCompany_IdAndBaggageType_Id(){
+        Company company = new Company(1, "A Company");
+        BaggageType baggageType = new BaggageType(2, "Hand baggage");
+        baggageRequirementService.findByCompany_IdAndBaggageType_Id(company.getId(), baggageType.getId())
+                .forEach(System.err::println);
+    }
+
+    @Test
+    @Order(3)
     void findAll(){
         baggageRequirementService.findAll().forEach(System.err::println);
     }
